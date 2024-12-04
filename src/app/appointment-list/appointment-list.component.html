@@ -1,23 +1,20 @@
-<div class="m-auto max-w-full justify-center">
+<div class="m-auto max-w-full justify-center bg-slate-200  p-3">
   <div class="card mt-3">
     <div class="row">
-      <h2 class="text-center"> Create New Appointment</h2>
+      <h2 class="text-center font-bold text-slate-600"> Create New Appointment</h2>
     </div>
     <div class="row mt-3 mx-auto max-w-full justify-items-center">
-      <div class="col-span-6 w-2/3 input shadow-md p-1 border-2 text-sm text-center">
-        <input [(ngModel)]="newAppointmentTitle" 
-                class="" 
+      <div class="w-2/3 shadow-sm p-1 border-2 text-sm text-center bg-white h-8">
+        <input class="w-full text-center" [(ngModel)]="newAppointmentTitle" 
                 placeholder="Appointment description">
       </div>
-      <div class="col-span-6 w-2/3 input shadow-md p-1 border-2 text-sm text-center">
-        <input [(ngModel)]="newAppointmentDate" 
-                class=" " 
+      <div class="w-2/3 shadow-sm p-1 border-2 text-sm text-center bg-white h-8">
+        <input class="w-full text-center justify-items-center" [(ngModel)]="newAppointmentDate" 
                 placeholder="Appointment date" 
                 type="date">
       </div>
-      <div class="col-span-6 w-2/3 button bg-teal-300 p-1 text-white font-semibold text-center">
-        <button class="" 
-                (click)="addAppointment()">Add appointment</button>
+      <div class="w-2/3 bg-teal-300 p-1 text-white font-semibold text-center hover:bg-teal-400 mb-4 mt-1 rounded-sm">
+        <button class="w-full text-center" (click)="addAppointment()">Add appointment</button>
       </div>
     </div>
   </div>
@@ -26,12 +23,12 @@
 
 <div class="container text-lg text-slate-600 font-bold mt-5 m-auto p-3 w-2/3 text-center "> Appointments </div>
   @for (app of appointments; track $index) {
-    <div class="col-span-6 shadow-md p-1 border-2 text-sm lg:flex md:flex sm:flex-none m-auto justify-between w-2/3">
+    <div class="shadow-md p-1 border-2 text-sm lg:flex md:flex sm:flex-none m-auto justify-between w-2/3">
       <div class="flex justify-between">
         <div class="p-1 m-2 min-w-32">{{ app.title }}</div>
         <div class="p-1 m-2">{{ app.date | date:'dd.MM.yyyy' }}</div>
       </div>
-      <div class="bg-pink-600 text-white font-semibold px-1 m-2 min-w-20 rounded-sm content-center text-center"><button (click)="deleteAppointment($index)">Delete</button></div>
+      <div class="bg-pink-600 text-white font-semibold px-1 m-2 min-w-20 rounded-sm content-center text-center hover:bg-pink-800"><button (click)="deleteAppointment($index)">Delete</button></div>
     </div>
   }  
 </div>

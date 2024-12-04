@@ -1,24 +1,22 @@
-<div class="m-auto max-w-full content-center">
+<div class="m-auto max-w-full justify-center">
   <div class="card mt-3">
     <div class="row">
-      <div class="col">
-        <h2 class="text-center"> Create New Appointment</h2>
-      </div>
+      <h2 class="text-center"> Create New Appointment</h2>
     </div>
-    <div class="row mt-3 mx-auto max-w-full">
-      <div class="col-span-6">
+    <div class="row mt-3 mx-auto max-w-full justify-items-center">
+      <div class="col-span-6 w-2/3 input shadow-md p-1 border-2 text-sm text-center">
         <input [(ngModel)]="newAppointmentTitle" 
-                class="input shadow-md p-1 border-2 text-sm w-2/3" 
+                class="" 
                 placeholder="Appointment description">
       </div>
-      <div class="col-span-6">
+      <div class="col-span-6 w-2/3 input shadow-md p-1 border-2 text-sm text-center">
         <input [(ngModel)]="newAppointmentDate" 
-                class="input shadow-md p-1 border-2 text-sm w-2/3" 
+                class=" " 
                 placeholder="Appointment date" 
                 type="date">
       </div>
-      <div class="col-span-6">
-        <button class="button bg-teal-300 p-1 text-white font-semibold w-2/3" 
+      <div class="col-span-6 w-2/3 button bg-teal-300 p-1 text-white font-semibold text-center">
+        <button class="" 
                 (click)="addAppointment()">Add appointment</button>
       </div>
     </div>
@@ -27,12 +25,12 @@
 
 <div>
 
-<div class="container text-lg text-slate-600 font-bold mt-5 m-auto p-3 max-w-fit"> Appointments </div>
+<div class="container text-lg text-slate-600 font-bold mt-5 m-auto p-3 w-2/3 text-center"> Appointments </div>
   @for (app of appointments; track $index) {
-    <div class="grid grid-cols-3 ml-3 p-3 max-w-fit m-auto justify-items-center justify-between">
-      <div class="mr-4 p-1 min-w-40">{{ app.title }}</div>
-      <div class="mr-4 p-1">{{ app.date | date:'dd.MM.yyyy' }}</div>
-      <button class="bg-pink-600 text-white font-semibold px-1 float-left max-w-28 min-w-36" (click)="deleteAppointment($index)">Delete</button>
+    <div class="grid grid-cols-3 gap-8 m-auto max-w-full justify-center w-2/3">
+      <div class="p-1 m-2 min-w-40">{{ app.title }}</div>
+      <div class="p-1 m-2">{{ app.date | date:'dd.MM.yyyy' }}</div>
+      <button class="bg-pink-600 text-white font-semibold px-1 m-2 float-left max-w-28 min-w-36" (click)="deleteAppointment($index)">Delete</button>
     </div>
   }  
 </div>

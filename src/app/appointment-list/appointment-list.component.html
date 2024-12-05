@@ -8,10 +8,18 @@
         <input class="w-full text-center" [(ngModel)]="newAppointmentTitle" 
                 placeholder="Appointment description">
       </div>
-      <div class="w-2/3 shadow-sm p-1 border-2 text-sm text-center bg-white h-8">
-        <input class="w-full text-center justify-items-center" [(ngModel)]="newAppointmentDate" 
+      <div class="w-2/3 shadow-sm p-1 border-2 text-sm  bg-white h-8 flex justify-between">
+        <input class="text-left" [(ngModel)]="newAppointmentDate" 
                 placeholder="Appointment date" 
                 type="date">
+            <div class="flex">
+              <div class="text-right bg-slate-100 pl-1">Time: </div>
+              <select class="bg-slate-100 content-center" [(ngModel)]="newAppointmentTime">
+                @for (time of times; track time) {
+                  <option [value]="time">{{time}}</option>
+                }
+              </select>
+            </div>
       </div>
       <div class="w-2/3 bg-teal-300 p-1 text-white font-semibold text-center hover:bg-teal-400 mb-4 mt-1 rounded-sm">
         <button class="w-full text-center" (click)="addAppointment()">Add appointment</button>
@@ -25,8 +33,9 @@
   @for (app of appointments; track $index) {
     <div class="shadow-md p-1 border-2 text-sm lg:flex md:flex sm:flex-none m-auto justify-between w-2/3">
       <div class="flex justify-between">
-        <div class="p-1 m-2 min-w-32">{{ app.title }}</div>
-        <div class="p-1 m-2">{{ app.date | date:'dd.MM.yyyy' }}</div>
+        <div class="p-1 m-1">{{ app.title }}</div>
+        <div class="p-1 m-1">{{ app.date | date:'dd.MM.yyyy' }}</div>
+        <div class="p-1 m-1">{{ app.time }}</div>
       </div>
       <div class="bg-pink-600 text-white font-semibold px-1 m-2 min-w-20 rounded-sm content-center text-center hover:bg-pink-800"><button (click)="deleteAppointment($index)">Delete</button></div>
     </div>

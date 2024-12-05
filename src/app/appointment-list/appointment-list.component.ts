@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Appointment } from '../models/appointment';
+import { Times } from '../models/times';
 
 @Component({
   selector: 'app-appointment-list',
@@ -10,12 +11,15 @@ export class AppointmentListComponent implements OnInit {
 
   newAppointmentTitle: string = "";
   newAppointmentDate: Date = new Date();
-  appointments: Appointment[] = []
+  newAppointmentTime: string = "";
+  appointments: Appointment[] = [];
+  times: string[] = [];
 
 
   ngOnInit(): void {
-    let savedAppointments = localStorage.getItem("appointments")
-    this.appointments = savedAppointments ? JSON.parse(savedAppointments): []
+    let savedAppointments = localStorage.getItem("appointments");
+    this.appointments = savedAppointments ? JSON.parse(savedAppointments): [];
+    this.times = Times;
   }
 
   addAppointment(){
@@ -23,12 +27,14 @@ export class AppointmentListComponent implements OnInit {
       let newAppointment: Appointment = {
         id: Date.now(),
         title: this.newAppointmentTitle,
-        date: this.newAppointmentDate
+        date: this.newAppointmentDate,
+        time: this.newAppointmentTime
       }
       this.appointments.push(newAppointment);
 
       this.newAppointmentTitle = "";
       this.newAppointmentDate = new Date();
+      this.newAppointmentTime = "";
 
       localStorage.setItem("appointments", JSON.stringify(this.appointments))
     }

@@ -2,9 +2,9 @@
 
 An appointment app which adds an appointment description and a date, and uses local storage to store data. The entries are displayed with the option to delete entries. The app uses responsive design and is styled with Tailwind CSS.
 
-![Large screen view](src/assets/image-3.png)
-![Medium screen view](src/assets/image-1.png)
-![Mobile view](src/assets/image-2.png)
+![Large screen view](src/assets/image.png)
+![Medium screen view](src/assets/image1.png)
+![Mobile view](src/assets/image2.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
 

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -13,9 +14,11 @@ import { AppointmentListComponent } from './appointment-list/appointment-list.co
   imports: [
     AppRoutingModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

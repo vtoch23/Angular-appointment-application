@@ -6,7 +6,58 @@ An appointment app which adds an appointment description and a date, and uses lo
 ![Medium screen view](src/assets/image1.png)
 ![Mobile view](src/assets/image2.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+This project was built with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+
+# Student Database Management Application
+
+Full-stack web application for managing student records, built with Angular on the frontend and Django on the backend. The project focuses on CRUD operations, API integration, and automated testing across the stack.
+
+## Overview
+This application allows users to create, view, update, and delete student records through a clean Angular interface backed by a Django REST API. It was built to practice full-stack development with Angular and Python, with particular emphasis on component testing, API communication, and database integration.
+
+## Tech Stack
+
+**Frontend**
+- Angular
+- TypeScript
+- HTML, CSS
+- Cypress (component testing)
+
+**Backend**
+- Django
+- Django REST Framework
+- Python
+- MySQL
+
+**Tooling**
+- Git
+- Postman
+
+## Key Features
+- Student record creation, editing, and deletion
+- RESTful API for student data management
+- Angular forms with two-way data binding
+- Client–server data validation
+- Persistent storage using a relational database
+
+## Architecture & Design
+- Angular frontend communicates with backend via REST APIs
+- Django REST Framework used to expose structured API endpoints
+- Relational database schema for student records
+- Separation of concerns between frontend UI and backend logic
+
+## Testing
+- Cypress component tests for Angular components
+- Backend API testing using Django test framework
+- Manual API validation with Postman
+
+## Getting Started
+
+```bash
+git clone https://github.com/vtoch23/Angular-Python-Django-Student-Database-App.git
+cd Angular-Python-Django-Student-Database-App
+
+
 
 ## Development server
 

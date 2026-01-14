@@ -1,62 +1,44 @@
-# ApointmentApp
-
-An appointment app which adds an appointment description and a date, and uses local storage to store data. The entries are displayed with the option to delete entries. The app uses responsive design and is styled with Tailwind CSS.
 
 ![Large screen view](src/assets/image.png)
 ![Medium screen view](src/assets/image1.png)
 ![Mobile view](src/assets/image2.png)
 
-This project was built with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+# Angular Appointment Application
 
-# Student Database Management Application
-
-Full-stack web application for managing student records, built with Angular on the frontend and Django on the backend. The project focuses on CRUD operations, API integration, and automated testing across the stack.
+A simple yet fully functional appointment scheduling application built with Angular and styled with Tailwind CSS. This project highlights modern Angular practices and responsive UI design.
 
 ## Overview
-This application allows users to create, view, update, and delete student records through a clean Angular interface backed by a Django REST API. It was built to practice full-stack development with Angular and Python, with particular emphasis on component testing, API communication, and database integration.
+This application allows users to book, view, and cancel appointments through a clean Angular-based interface. It was created to practice Angular fundamentals including components, services, form handling, and state management, with a focus on responsive UI and usability.
 
 ## Tech Stack
 
 **Frontend**
 - Angular
 - TypeScript
+- Tailwind CSS
 - HTML, CSS
-- Cypress (component testing)
-
-**Backend**
-- Django
-- Django REST Framework
-- Python
-- MySQL
 
 **Tooling**
 - Git
-- Postman
 
 ## Key Features
-- Student record creation, editing, and deletion
-- RESTful API for student data management
-- Angular forms with two-way data binding
-- Client–server data validation
-- Persistent storage using a relational database
+- View, add, and delete appointments
+- Form validation with reactive Angular forms
+- Responsive user interface with Tailwind CSS
+- Component-based architecture
 
 ## Architecture & Design
-- Angular frontend communicates with backend via REST APIs
-- Django REST Framework used to expose structured API endpoints
-- Relational database schema for student records
-- Separation of concerns between frontend UI and backend logic
+- Modular Angular application structure
+- Components for listing, creating, and deleting appointments
+- Services to manage appointment data within application state
 
-## Testing
-- Cypress component tests for Angular components
-- Backend API testing using Django test framework
-- Manual API validation with Postman
-
-## Getting Started
+## To run
 
 ```bash
-git clone https://github.com/vtoch23/Angular-Python-Django-Student-Database-App.git
-cd Angular-Python-Django-Student-Database-App
-
+git clone https://github.com/vtoch23/Angular-appointment-application.git
+cd Angular-appointment-application
+npm install
+ng serve
 
 
 ## Development server
